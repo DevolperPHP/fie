@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap');
+
+body{
+   overflow-x: hidden;
+}
+
+@media only screen and (max-width: 1500px){
+    body{
+        zoom: 70%
+    }
+}
+
+@media only screen and (min-width: 1501px){
+    body{
+        zoom: 0%
+    }
+}
+
+*{
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* NavBar */
+
+nav{
+    border-radius: 0px;
+    background-color: #393738;
+}
+
+nav span{
+    color:#F50057;
+}
+
+nav .title-name{
+    color: #F50057;
+    margin-top: 0.5%;
+    margin-left: -1%;
+    font-size: 30px;
+    font: bolder;
+    font-family: 'Exo', sans-serif;
+}
+
+nav .title-name span{
+    color: white;
+    font-family: 'Exo', sans-serif;
+}
+
+nav img{
+    height: 5%;
+    width: 5%;
+}
+
+nav .elements{
+    display: inline-flex;
+}
+
+nav button{
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    transition: all 1000ms ease 0ms;
+}
+
+nav button:hover{
+    font-size: 30px;
+}
+
+nav *{
+    margin-bottom: -1%;
+}
+
+nav .nav-buttons{
+    margin-left: 3%;
+    display: inline-flex;
+}
+
+nav .nav-buttons button{
+    margin-left: 50px;
+}
+
+ /* Second Nav */
+
+.cat {
+  display: inline-flex;
+  background-color: white;
+}
+
+.cat .left-right{
+    background-color: #393738;
+    border: none;
+    border-radius: 12px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.cat button{
+    background-color: #F50057;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 150px;
+    transition: all 1000ms ease 0ms;
+}
+
+
+.cat button:hover{
+    background-color: #393738;
+    width: 180px;
+}
+
+.cat div{
+    display: inline-flex;
+}
+
+/* Footer */
+
+.contact{
+    display: inline-flex;
+}
+
+.contact a{
+    font-size: 50px;
+    color: #F50057;
+}
+
+
+.contact .FIE{
+    font-size: 60px;
+    color: #F50057;
+    font-family: 'Exo', sans-serif;
+}
+
+.contact .SBS{
+    font-size: 60px;
+    color: #393738;
+    font-family: 'Exo', sans-serif;
+}
+/* All product file */
+
+.svg-allproduct .pc-svg{
+    margin-top: 50px;
+    height: 600px;
+}
+
+.res-svg{
+    display: none;
+}
+
+.svg-allproduct{
+    display: inline-flex;
+    margin-right: 380px;
+}
+
+.svg-allproduct .carousel{
+    margin-top: 50px;
+    background-color: #393738;
+}
+
+.our-title{
+    margin-top: 20px;
+}
+
+.our-title .FIE{
+    font-size: 60px;
+    color: #F50057;
+    font-family: 'Exo', sans-serif;
+}
+
+.our-title .SBS{
+    font-size: 60px;
+    color: #393738;
+    font-family: 'Exo', sans-serif;
+}
+
+.our-title p{
+    display: block;
+    font-size: 20px;
+}
+
+/* Card */
+
+.pimage{
+    max-width: 400px;
+}
+
+.pro-border{
+    margin-top: 50px;
+    background-color: white;
+    border-style: solid;
+    border-width: 0.00001px;
+    border-color: #393738;
+    border-radius: 15px;
+}
+
+.pro-border .price{
+    margin-top: 2px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Exo', sans-serif;
+}
+
+.pro-border .bor{
+    border-bottom: white solid;
+    width: 60%;
+    border-radius: 12px;
+}
+
+.pro-border .iqd{
+    color:#F50057;
+    font-size: 15px;
+}
+
+.pro-border .product-title{
+    color: white;
+    font-size: 30px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-family: 'Exo', sans-serif;
+}
+
+.pro-border .border-flex{
+    border-top: #F50057 solid;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom: #F50057 solid;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.pro-border button{
+    background-color: white;
+    color: #F50057;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    width: 70%;
+    transition: all 1000ms ease 0ms;
+}
+
+.pro-border button:hover{
+    width: 80%;
+    background-color: #F50057;
+    color: white;
+}
+
+/* Search Bar */
+
+.search input{
+    border-style: solid;
+    border-color: #F50057;
+    border-width: 2px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 400px;
+    transition: all 1000ms ease-out 0ms;
+}
+
+.search input:hover{
+    border-top: solid;
+    border-right: solid;
+    border-left: solid;
+    border-radius: 13px;
+    border-color: #F50057;
+    border-width: 2px;
+}
+
+.search ion-icon{
+    font-size: 20px;
+    margin-top: 2px;
+    right: 42%;
+    position: absolute;
+    color: #F50057;
+}
+
+.search button{
+    background-color: #F50057;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    transition: all 1000ms ease 0ms;
+}
+
+.search button:hover{
+    background-color: #393738;
+}
+
+/* Product Page */
+
+ul.gallery li {
+    display: inline-block;
+    margin: 0px;
+    list-style: none;
+}
+
+ul.gallery img{
+    height: 200px;
+}
+
+.product-information{
+    margin-top: 40px;
+    margin-right: 30px;
+}
+
+.product-information img{
+    height: 600px;
+    margin-left: -40px;
+}
+
+.product-information .porduct-title{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Exo', sans-serif;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #F50057;
+    border-radius: 13px;
+    width: 60%;
+    text-align: center;
+}
+
+.product-information .dec{
+    font-size: 20px;
+}
+
+.product-information .price{
+    font-size: 30px;
+    color: #F50057;
+    font-family: 'Exo', sans-serif;
+}
+
+.product-information .iqd{
+    font-size: 20px;
+    color: #393738;
+    font-family: 'Exo', sans-serif;
+}
+
+.product-information .every{
+    border-style: solid;
+    border-color: #393738;
+    width: 50%;
+    border-width: 2px;
+    border-radius: 22px;
+    margin-top: 50px;
+}
+
+.product-information .every p{
+    font-size: 20px;
+}
+
+.product-information button{
+    margin-top: 20px;
+    background-color: #F50057;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    transition: all 1000ms ease 0ms;
+}
+
+.product-information button:hover{
+    font-size: 30px;
+}
+
+.product-information .back{
+    background-color: #393738;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    width: 15%;
+    transition: all 1000ms ease 0ms;
+}
+
+/* Login Page */
+
+.login-form{
+    position: absolute;
+    top: 30%;
+    right: 15%;
+}
+
+.login-form input{
+    width: 600px;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: #F50057;
+    border-bottom-width: 2px;
+}
+
+.login-form label{
+    margin-top: 50px;
+}
+
+.login-form .login-button{
+    background-color: #F50057;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 1000ms ease 0ms;
+}
+
+.login-form .login-button:hover{
+    font-size: 30px;
+}
+
+.register-button{
+    background-color: #393738;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 1000ms ease 0ms;
+}
+
+.register-button:hover{
+    font-size: 30px;
+}
+
+.login-svg{
+    margin-left: 20px;
+}
+
+/* register page */
+
+.register-svg{
+    position: relative;
+    height: 600px;
+}
+
+.register-form{
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    width: 600px;
+}
+
+.register-form input{
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #F50057;
+}
+
+.register-form .register-button{
+    background-color: #F50057;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 1000ms ease 0ms;
+}
+
+.register-form .register-button:hover{
+    font-size: 30px;
+}
+
+/* Checkout page */
+
+.check-out img{
+    height: 100px;
+}
+
+.check-out .name{
+    font-size: xx-large;
+}
+
+.check-out .price{
+    font-size: xx-large;
+}
+
+.check-out .qty{
+    font-size: xx-large;
+}
+
+.check-out .iqd{
+    font-size: large;
+    color: #F50057;
+}
+
+.check-out .more{
+    color: #62D375;
+    font-size: x-large;
+}
+
+.check-out .less{
+    color: #F50057;
+    font-size: x-large;
+}
+
+.check-out .delete{
+    color: red;
+    font-size: large;
+}
+
+
+.check-out input{
+    width: 500px;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #F50057;
+}
+
+.carousel{
+    margin-right: 50px;
+}
+
+@media only screen and (max-width: 1000px){
+    /* Navbar */
+    nav{
+        max-width: 100%;
+    }
+
+    nav img{
+        height: 50px;
+        width: 50px;
+    }
+
+    nav button{
+        font-size: 12px;
+    }
+
+    nav button:hover{
+        font-size: 18px;
+    }
+
+    nav .nav-buttons button{
+        margin-left: 0;
+    }
+
+    /* Second Navbar */
+
+    .cat .left-right{
+        font-size: 20px;
+        width: 10%;
+    }
+
+    .cat .left-right:hover{
+        width: 10%;
+    }
+
+    .cat button{
+        margin: 2px;
+        width: 26%;
+    }
+
+    .cat button:hover{
+        width: 26%;
+    }
+
+    /* all products page */
+
+    .svg-allproduct{
+        display: grid;
+        margin-right: 0px;
+    }
+
+    .svg-allproduct .pc-svg{
+        display: none;
+    }
+
+    .res-svg{
+        display: grid;
+        height: 320px;
+        margin-left: -140px;
+        margin-top: 30px;
+    }
+
+    .carousel{
+        width: 500px;
+        margin-left: -140px;
+    }
+
+    .our-title{
+        margin-left: -100px;
+        width: 440px;
+    }
+
+    .our-title p{
+        font-size: 15px;
+    }
+
+    .order .name{
+        font-size: 25px;
+    }
+
+    .product-information img{
+        height: 300px;
+        margin-left: 0px;
+    }
+
+    .product-information .porduct-title{
+        font-size: 25px;
+    }
+
+    .product-information .dec{
+        margin-left: 15px;
+    }
+
+    .product-information .every{
+        width: 90%;
+        margin-left: 30px;
+    }
+
+    .product-information .every p{
+        font-size: 18px;
+    }
+
+    .login-svg{
+        height: 400px;
+        margin-left: -130px;
+        margin-top: 20px;
+    }
+
+    .login-form{
+        position: relative;
+        top: 0%;
+        right: 0%;
+    }
+
+    .login-form input{
+        width: 400px;
+        border: none;
+        border-bottom-style: solid;
+        border-bottom-color: #F50057;
+        border-bottom-width: 2px;
+    }
+
+    .register-button{
+        background-color: #393738;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        margin-top: 0px;
+        transition: all 1000ms ease 0ms;
+    }
+
+    .register-svg{
+        position: relative;
+        margin-top: 20px;
+        height: 500px;
+        margin-left: 50px;
+    }
+
+    .register-form{
+        margin-top: 20px;
+        position: relative;
+        top: 0%;
+        right: 0%;
+        width: 400px;
+    }
+}

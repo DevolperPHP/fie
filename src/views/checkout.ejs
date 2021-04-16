@@ -1,0 +1,120 @@
+<% include _layouts/header %>
+<center>
+<div style="width: 95%">
+
+<% if (typeof cart !== "undefined") { %>
+
+<h1 class="page-title">عربة التسوق</h1>
+<br><br>
+
+<table class="check-out table table-striped alignmiddle responsive">
+    
+    <tr>
+        <th>صورة المنتج</th>
+        <th>اسم المنتج</th>
+        <th>سعر المنتج</th>
+        <th>العدد</th>
+        <th></th>
+    </tr>
+    
+    <% var total = 0; %>
+    <% cart.forEach(function(product){ %>
+    <% var sub = parseFloat(product.qty * product.price).toFixed(0) %>
+    <% total += +sub %>
+    <tr class="order">
+        <td><img class="cpi" src="<%= product.image %>" alt=""></td>
+        <td class="name"><%= product.title %></td>
+        <td class="price"><%= product.price %> <span class="iqd">IQD<span></td>
+        <td class="qty"><%= product.qty %></td>
+        <td>
+            <a class="more" href="/cart/update/<%= product.title %>?action=add">+</a>&nbsp;
+            <br>
+            <a class="less" href="/cart/update/<%= product.title %>?action=remove">-</a>&nbsp;
+            <br>
+            <a class="delete" href="/cart/update/<%= product.title %>?action=clear">حذف</a>&nbsp;
+        </td>
+    </tr>
+    <% }); %>
+    <tr>
+        <td colspan="6" align="center" style="text-align: center"><b>المبلغ الكلي: </b> $<%= parseFloat(total).toFixed(0) %></td>
+    </tr>
+    <tr>
+        <td colspan="5" align="center">
+            <a class="clearcart delete" href="/cart/clear" style="">حذف المنتجات من عربة التسوق<ion-icon name="trash"></ion-icon></a>
+        
+        <br>
+        <br>
+         
+            <form onsubmit="SendMessageHandler(this);">
+
+			<input pattern="[0-9.]+" 
+            type="text" name="message" placeholder="قم بادخال رقم هاتفك"
+            maxlength="11" minlength="11" oninvalid="this.setCustomValidity('يجب عليك ادخال 11 رقم فقط')" 
+             onchange="this.setCustomValidity('')" type="text"  class="form-control" style="direction: rtl; padding-left: -30px">
+<br>
+            <input type="text" name="location" placeholder="قم بادخال عنوان السكن" class="form-control" style="direction: rtl;">
+<br>
+            <input type="text" name="code" placeholder="قم بادخال كود الخصم (اختياري)" maxlength="20" class="form-control" style="direction: rtl;">
+            <br>
+              
+            <br>
+			<button type="submit" class="btn btn-success" name="Submit" id="but" value="Puxar Alavanca">الشراء الان</button>
+		</form>
+
+		<script type="text/javascript">
+			function SendMessageHandler(form) {
+				event.preventDefault();
+
+				let message = document.querySelectorAll("body > center:nth-child(5) > div > table > tbody > tr > td > form > input")[0].value;
+                let location = document.querySelectorAll("body > center:nth-child(5) > div > table > tbody > tr > td > form > input")[1].value;
+                let code = document.querySelectorAll("body > center:nth-child(5) > div > table > tbody > tr > td > form > input")[2].value;
+                let product_name = "اسم المنتج: ";
+                let qty_msg = "العدد المطلوب: ";
+                let space = "                                                                      "
+                let count = document.querySelectorAll("body > center > div > table > tbody > tr").length;
+                if(message == ""){
+
+                    alert("قم بادخال رقمك");
+
+                } else if(location == ""){
+
+                    alert("قم بادخال عنوان السكن")
+
+                } else {
+                        sendMessage(message);
+                        sendMessage(code);
+                        sendMessage(location);
+                    alert("تم ارسال طلبك بتجاح");
+                    for(var i = 0; i <= count-1; i++){
+                        var name = document.querySelectorAll("body > center:nth-child(5) > div > table > tbody > tr > td.name")[i].innerText;
+                        var qit = document.querySelectorAll("body > center:nth-child(5) > div > table > tbody > tr > td.qty")[i].innerText;
+                        sendMessage(name + product_name + space + qit + qty_msg);
+                    } 
+                }
+                
+			}
+
+			async function sendMessage(msg) {
+				let BotToken = '1377829991:AAGeGK3TN6PXNNmIFPKjOq1QT0k38n7m83A';
+				let SendTo = '613485371';
+                let SendTo2 = '562278615';
+				let message = msg;
+
+				let resp = await fetch('https://api.telegram.org/bot' + BotToken + '/sendMessage?chat_id=' + SendTo + '&text=' + message).then(res => res.json());
+                let resp2 = await fetch('https://api.telegram.org/bot' + BotToken + '/sendMessage?chat_id=' + SendTo2 + '&text=' + message).then(res => res.json());
+                                                                                                                    
+    			if (resp.ok && resp2.ok) console.log('the message was sent');
+			}
+
+
+		</script>
+        
+        </td>
+    </tr>
+    
+</table>
+<% } else {%>
+<h3 class="text-center">سلة التسوق فارغة</h3>
+<% } %>
+
+</center>

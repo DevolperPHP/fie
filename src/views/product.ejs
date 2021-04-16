@@ -1,0 +1,42 @@
+<% include _layouts/header %>
+
+<div class="product-information row">
+    
+    <div class=" col-xs-12 col-md-5">
+        <img class="spi" src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+        <br>
+    </div>
+    <div class="col-xs-12 col-md-7">
+    <center>
+    <p class="page-header porduct-title"><%= p.title %></p>
+        <p class="dec"><%= p.desc %></p>
+        <p class="price"><%= parseFloat(p.price).toFixed(0) %><span class="iqd">IQD<span></p>
+        <div class="every">
+        <p>يوجد لدينا توصيل في جميع انحاء العراق و الدفع عند الاستلام</p>
+        <p><span class="price">3000<span class="iqd">IQD</span> - 10000<span class="iqd">IQD</span></span> سعر التوصيل ما بين</p>
+        </div>
+        <% if (loggedIn) { %>
+        <p><button onclick="window.location.href='/cart/add/<%= p.slug %>'">اضافة الى عربة التسوق<ion-icon name="cart" style="font-size: 15px;"></ion-icon></button></p> 
+        <% } else {%>
+        <p><button onclick="window.location.href='/cart/add/<%= p.slug %>'">اضافة الى عربة التسوق<ion-icon name="cart" style="font-size: 15px;"></ion-icon></button></p>
+        <% } %>
+
+        <button class="back" onclick="window.history.back();">رجوع</button>
+        </center>
+    </div>
+    <div class="col-xs-12">
+        <ul class="gallery">
+            <% galleryImages.forEach(function(image){ %>
+            <% if (image != "thumbs") { %>
+            <li>
+                <a data-fancybox="gallery" href="/product_images/<%= p.id %>/gallery/<%= image %>">
+                    <img src="/product_images/<%= p.id %>/gallery/thumbs/<%= image %>" alt="">
+                </a>
+            </li>
+            <% } %>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+
+<% include _layouts/footer %>

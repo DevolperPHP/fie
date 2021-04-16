@@ -1,0 +1,23 @@
+<% include _layouts/header %>
+
+<div class="row products pro">
+    
+    <% products.forEach(function(p){ %>
+            <div class="col-xs-12 col-md-4 p">
+            <div class="pro-border" style="background-color: rgb(238,238,238);">
+            <br>
+                <a class="pa" href="/products/<%= p.category %>/<%= p.slug %>">
+                    <img class="pimage" src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+                </a>
+                <h4 style="color: rgba(17,214,221); margin-top: -20px;" class="price"><%= parseFloat(p.price).toFixed(0) %> <span class="iqd">IQD<span></h4>
+                <h3><%= p.title %></h3>
+                
+                <button class="more" style="margin-bottom: 5px;" onclick="window.location.href='/products/<%= p.category %>/<%= p.slug %>'">المزيد من المعلومات <ion-icon name="book" style="font-size: 15px;"></ion-icon></button>
+                <button onclick="window.location.href='/cart/add/<%= p.slug %>'" class="addto">اضافة الى عربة التسوق<ion-icon name="cart" style="font-size: 15px;"></ion-icon></button>
+            </div><br>
+            </div>
+        <% }); %>
+    
+</div>
+
+<% include _layouts/footer %>
